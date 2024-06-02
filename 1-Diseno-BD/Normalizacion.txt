@@ -1,0 +1,19 @@
+Venta   Fecha     Nombres       Correo                  Telefono    Direccion                   Ciudad      Pais    Producto    Precio  Cantidad
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+1       01-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 1 No. 58-1 CP 03100   CDMX        Mexico  Laptop      25000   2           
+2       02-enero  Pedro Gomez   pedro.gomez@gmail.com   932484329   Calle 2 No. 85-6 CP 44100   Guadalajara Mexico  Celular     12000   3           
+3       03-enero  Ana Silva     ana.silva@gmail.com     934845392   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Microfono   2.500   1           
+4       04-enero  Ana Silva     ana.silva@gmail.com     934523458   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Laptop      25000   1           
+5       05-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 4 No. 45-3 CP 03920   CDMX        Mexico  Microfono   2.500   3           
+
+
+Primera Forma Normal - 1FN - Atomizar
+----------------------------------------
+
+Venta   Fecha     Nombres       Correo                  Telefono    Direccion                   Ciudad      Pais    Producto    Precio  Cantidad
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+1       01-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 1 No. 58-1 CP 03100   CDMX        Mexico  Laptop      25000   2           
+2       02-enero  Pedro Gomez   pedro.gomez@gmail.com   932484329   Calle 2 No. 85-6 CP 44100   Guadalajara Mexico  Celular     12000   3           
+3       03-enero  Ana Silva     ana.silva@gmail.com     934845392   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Microfono   2.500   1           
+4       04-enero  Ana Silva     ana.silva@gmail.com     934523458   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Laptop      25000   1           
+5       05-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 4 No. 45-3 CP 03920   CDMX        Mexico  Microfono   2.500   3   
