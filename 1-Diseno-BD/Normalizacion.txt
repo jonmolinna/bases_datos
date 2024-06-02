@@ -10,10 +10,103 @@ Venta   Fecha     Nombres       Correo                  Telefono    Direccion   
 Primera Forma Normal - 1FN - Atomizar
 ----------------------------------------
 
-Venta   Fecha     Nombres       Correo                  Telefono    Direccion                   Ciudad      Pais    Producto    Precio  Cantidad
+Venta  Fecha   Nombre   Apellido  Correo                  Telefono    Calle     Numero  CP      Ciudad      Pais    Producto    Precio  Cantidad
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-1       01-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 1 No. 58-1 CP 03100   CDMX        Mexico  Laptop      25000   2           
-2       02-enero  Pedro Gomez   pedro.gomez@gmail.com   932484329   Calle 2 No. 85-6 CP 44100   Guadalajara Mexico  Celular     12000   3           
-3       03-enero  Ana Silva     ana.silva@gmail.com     934845392   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Microfono   2.500   1           
-4       04-enero  Ana Silva     ana.silva@gmail.com     934523458   Calle 3 No. 33-3 CP 64000   Monterrey   Mexico  Laptop      25000   1           
-5       05-enero  Juan Perez    juan.perez@gmail.com    123456789   Calle 4 No. 45-3 CP 03920   CDMX        Mexico  Microfono   2.500   3   
+1      01-ene  Juan     Perez     juan.perez@gmail.com    123456789   Calle 1   58-1    03100   CDMX        Mexico  Laptop      25000   2           
+2      02-ene  Pedro    Gomez     pedro.gomez@gmail.com   932484329   Calle 2   85-6    44100   Guadalajara Mexico  Celular     12000   3           
+3      03-ene  Ana      Silva     ana.silva@gmail.com     934845392   Calle 3   33-3    64000   Monterrey   Mexico  Microfono   2.500   1           
+4      04-ene  Ana      Silva     ana.silva@gmail.com     934523458   Calle 3   33-3    64000   Monterrey   Mexico  Laptop      25000   1           
+5      05-ene  Juan     Perez     juan.perez@gmail.com    123456789   Calle 4   45-3    03920   CDMX        Mexico  Microfono   2.500   3   
+
+
+Segunda Forma Normal - 2FN - Eliminacion de duplicados
+--------------------------------------------------------
+
+Venta  Fecha   Cliente  Direccion   Producto    Precio  Cantidad
+------------------------------------------------------------------
+1      01-ene  1         1          Laptop      25000   2  
+2      02-ene  2         2          Celular     12000   3
+3      03-ene  3         3          Microfono   2500    1
+4      04-ene  3         3          Laptop      25000   1
+5      05-ene  1         4          Microfono   2500    3
+
+
+Cliente  Nombre   Apellido   Correo                  Telefono
+-------------------------------------------------------------------
+1        Juan      Perez     juan.perez@gmail.com    123456789
+2        Pedro     Gomez     pedro.gomez@gmail.com   932484329
+3        Ana       Silva     ana.silva@gmail.com     934845392
+
+
+Direccion   Cliente   Calle     Numero  CP      Ciudad        Pais     
+--------------------------------------------------------------------
+1           1         Calle 1   58-1    03100   CDMX          Mexico    
+2           2         Calle 2   85-6    44100   Guadalajara   Mexico
+3           3         Calle 3   33-3    64000   Monterrey     Mexico
+4           3         Calle 4   45-3    03920   CDMX          Mexico
+
+
+Tercera Forma Normal - 3FN
+------------------------------------------------
+
+Venta  Fecha   Cliente  Direccion   Producto  Cantidad
+------------------------------------------------------------------
+1      01-ene  1         1          1         2
+2      02-ene  2         2          2         3
+3      03-ene  3         3          3         1
+4      04-ene  3         3          1         1
+5      05-ene  1         4          3         3
+
+Producto    Producto    Precio  Cantidad
+------------------------------------------
+1           Laptop      25000   2  
+2           Celular     12000   3
+3           Microfono   2500    1
+
+Cliente  Nombre   Apellido   Correo                  Telefono
+-------------------------------------------------------------------
+1        Juan      Perez     juan.perez@gmail.com    123456789
+2        Pedro     Gomez     pedro.gomez@gmail.com   932484329
+3        Ana       Silva     ana.silva@gmail.com     934845392
+
+Direccion   Cliente   Calle     Numero  CP      Ciudad        Pais     
+--------------------------------------------------------------------
+1           1         Calle 1   58-1    03100   CDMX          Mexico    
+2           2         Calle 2   85-6    44100   Guadalajara   Mexico
+3           3         Calle 3   33-3    64000   Monterrey     Mexico
+4           3         Calle 4   45-3    03920   CDMX          Mexico
+
+
+Cuarta Forma Normal - 4FN - Optimizacion de datos
+---------------------------------------------------
+
+Venta  Fecha   Cliente  Direccion   Producto  Cantidad
+------------------------------------------------------------------
+1      01-ene  1         1          1         2
+2      02-ene  2         2          2         3
+3      03-ene  3         3          3         1
+4      04-ene  3         3          1         1
+5      05-ene  1         4          3         3
+
+Producto    Producto    Precio  Cantidad
+------------------------------------------
+1           Laptop      25000   2  
+2           Celular     12000   3
+3           Microfono   2500    1
+
+Cliente  Nombre   Apellido   Correo                  Telefono
+-------------------------------------------------------------------
+1        Juan      Perez     juan.perez@gmail.com    123456789
+2        Pedro     Gomez     pedro.gomez@gmail.com   932484329
+3        Ana       Silva     ana.silva@gmail.com     934845392
+
+Direccion   Cliente   Calle     Numero  CP      Ciudad        Pais     
+--------------------------------------------------------------------
+1           1         Calle 1   58-1    03100   CDMX          1    
+2           2         Calle 2   85-6    44100   Guadalajara   1
+3           3         Calle 3   33-3    64000   Monterrey     1
+4           3         Calle 4   45-3    03920   CDMX          1
+
+Pais    Nombre      Dominio
+------------------------------
+1       Mexico      mx
