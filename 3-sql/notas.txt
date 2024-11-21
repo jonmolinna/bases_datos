@@ -1,0 +1,14 @@
+Tipos de Sentencias SQL
+--------------------------------
+1. Data Definition Language (DDL): Create, Alter, Drop, Truncate
+2. Data Manipulation Language (DML): Select, Insert Update, Delete
+3. Data Control Language (DCL): Grant, Revoke
+4. Transaction Control Language (TCL): Commit, Rollback, Set Transaction
+
+Tips
+------------------------------
+SQL, no distingue entre mayusculas y minusculas pero:
+    - Comandos y palabras reservadas de sql vas en mayusculas.
+    - Nombres de objetos y datos van en minusculas con _snake_case_.
+    - Para strings usar comillas simples ('').
+    - Todas las sentencias terminan con punto y coma.
