@@ -116,5 +116,18 @@ SELECT * FROM caballeros c RIGHT JOIN signos s
     ON c.signo = s.id;
 
 
+SELECT c.id, c.name as "Caballero", a.name as "Armadura",
+s.name as "Signo", r.name as "Rango",
+e.name as "Ejercito", p.name as "Pais" FROM caballeros c 
+INNER JOIN armaduras a  ON c.armadura = a.id
+INNER JOIN signos s ON c.signo = s.id
+INNER JOIN rangos r ON c.rango = r.id
+INNER JOIN ejercitos e ON c.ejercito = e.id
+INNER JOIN paises p ON c.pais = p.id;
 
-
+----------------------- Sub Consultar
+-- Calcular cantidad de caballeros en un signo
+SELECT name as signo,
+(SELECT COUNT(*) FROM caballeros c WHERE c.signo = s.id)
+AS total_caballeros
+FROM signos s;
